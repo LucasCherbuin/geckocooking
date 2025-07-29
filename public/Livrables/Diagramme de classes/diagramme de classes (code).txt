@@ -1,0 +1,56 @@
+@startuml
+
+class Utilisateur {
+  String pseudo
+  String email
+  String motDePasse
+  int roleId
+  int recetteId
+  int commentaireId
+}
+
+class Recette {
+  String titre
+  String description
+  Time tempsPreparation
+  Time tempsCuisson
+  int difficulteId
+  int imageId
+  int ingredientId
+  int etapesId
+  int commentaireId
+}
+
+class Ingredient {
+  String nom
+  int imageId
+}
+
+class Difficulte {
+  String label
+}
+
+class Image {
+  String lien
+}
+
+class Etapes {
+  String etape1
+  String etape2
+  String etape3
+  String etape4
+}
+
+class Regime {
+  String Label
+}
+' Relations
+
+Utilisateur "1" -- "0..*" Recette : crée
+Recette "1" -- "1" Difficulte : a
+Recette "1" -- "1" Image : illustration
+Recette "1" -- "0..*" Ingredient : contient
+Recette "1" -- "1" Etapes : étapes
+Recette "1" -- "1" Regime : Regime
+Ingredient "1" -- "0..1" Image : illustration
+@enduml
