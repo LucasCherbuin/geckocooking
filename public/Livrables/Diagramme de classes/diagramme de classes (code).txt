@@ -18,7 +18,6 @@ class Recette {
   int imageId
   int ingredientId
   int etapesId
-  int commentaireId
 }
 
 class Ingredient {
