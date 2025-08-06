@@ -1,0 +1,24 @@
+@startuml
+
+actor Admin
+participant Accueil
+participant Connexion
+Participant Menu_Admin
+Participant Gestion_Utilisateur
+Participant Dashboard
+Participant Database
+
+
+Admin -> Accueil : accès à l'application (aucune connexion)
+Accueil -> Connexion : connexion en tant qu'Admin
+Connexion -> Accueil : accès à l'application en tant qu'admin
+Accueil-> Menu_Admin : accès à la barre du menu de choix crud (employer) de l'administrateur
+Menu_Admin -> Gestion_Utilisateur : accès au tableau selon le choix de l'opération Crud
+Gestion_Utilisateur -> Database : modification d'un Utilisateur
+Database -> Gestion_Utilisateur : Validation des modification
+Gestion_Utilisateur  -> Menu_Admin : Sortie de la page des gestion utilisateur
+Menu_Admin -> Connexion : Deconnexion 
+Connexion -> Accueil : retour de l'applicaiton sans connexion 
+Accueil -> Admin : Sortit de l'application 
+
+@enduml
