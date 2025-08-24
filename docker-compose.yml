@@ -12,3 +12,24 @@ services:
       - /app/node_modules
     environment:
       - NODE_ENV=development
+  postgres:
+      image: postgres:16
+      container_name: postgres_db
+      restart: always
+      environment:
+        POSTGRES_USER: gecko
+        POSTGRES_PASSWORD: mypassword
+        POSTGRES_DB: mydatabase
+      ports:
+        - "5432:5432"
+      volumes:
+        - ./postgres_data:/var/lib/postgresql/data
+
+  mongo:
+    image: mongo:7.0
+    container_name: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
