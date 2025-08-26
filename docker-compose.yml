@@ -18,8 +18,7 @@ services:
       restart: always
       environment:
         POSTGRES_USER: gecko
-        POSTGRES_PASSWORD: mypassword
-        POSTGRES_DB: mydatabase
+        POSTGRES_DB: gecko
       ports:
         - "5432:5432"
       volumes:
