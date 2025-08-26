@@ -1,0 +1,23 @@
+@startuml
+
+actor Visiteur
+participant Accueil
+participant Recettes
+participant Filtre_recettes
+participant Connexion
+participant Création_de_compte
+participant Database
+
+Visiteur -> Accueil : accès accueil du site
+Accueil -> Recettes : saisie d'une recherche de recette
+Accueil -> Connexion : accès à la page de connexion
+Connexion -> Création_de_compte : accès à la page de création de compte "consommateur"
+Recettes -> Filtre_recettes : filtrage des recettes selon des critères
+Filtre_recettes -> Recettes  : résultat des recettes selon des critères
+Création_de_compte -> Database : enregistrement du nouveau compte
+Database -> Accueil : attribution du rôle "consommateur" et retour au menu
+Connexion -> Database : Connexion avec un compte utilisateur
+Database -> Accueil : retour à l'accueil avec le role attribué
+
+
+@enduml

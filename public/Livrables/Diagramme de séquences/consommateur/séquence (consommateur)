@@ -1,0 +1,26 @@
+@startuml
+
+actor Consommateur
+participant Accueil
+participant Connexion
+Participant Menu_Consommateur
+Participant Gestion_Recette
+Participant Dashboard
+Participant Database
+
+
+Consommateur-> Accueil : accès à l'application (aucune connexion)
+Accueil -> Connexion : connexion en tant que Consommateur
+Connexion -> Accueil : accès à l'application en tant que Consommateur
+Accueil-> Menu_Consommateur : accès à la barre du menu de choix crud pour une recette
+Menu_Consommateur -> Gestion_Recette : accès au tableau selon le choix de l'opération Crud
+Gestion_Recette -> Database : modification d'une Recette
+Database -> Gestion_Recette : Validation des modification
+Gestion_Recette  -> Menu_Consommateur : Sortie de la page des gestion utilisateur
+Menu_Consommateur -> Dashboard : consulté l'état de la validation de recette ainsi que de dashboards de statisques
+Dashboard -> Menu_Consommateur: Retour au menu
+Menu_Consommateur  -> Connexion : Deconnexion 
+Connexion -> Accueil : retour de l'applicaiton sans connexion 
+Accueil -> Consommateur  : Sortit de l'application 
+
+@enduml

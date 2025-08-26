@@ -1,0 +1,28 @@
+@startuml
+
+actor Employé
+participant Accueil
+participant Connexion
+Participant Menu_Employé
+Participant Gestion_Ingredient
+Participant Validation_de_recette
+Participant Database
+
+
+Employé -> Accueil : accès à l'application (aucune connexion)
+Accueil -> Connexion : connexion en tant qu'Employé
+Connexion -> Accueil : accès à l'application en tant qu'employé
+Accueil-> Menu_Employé : accès à la barre du menu de choix crud pour ajouter un ingrédient
+Menu_Employé -> Gestion_Ingredient : accès au tableau selon le choix de l'opération Crud
+Gestion_Ingredient -> Database : modification d'un ingrédient
+Database -> Gestion_Ingredient : Validation des modification
+Gestion_Ingredient  -> Menu_Employé : Sortie de la page des gestion utilisateur
+Menu_Employé  -> Validation_de_recette : valider une recette proposé par un consommateur
+Validation_de_recette -> Database : accepter ou refuser la recette
+Database -> Validation_de_recette : changement du status booleen en true si accepter ou suppression si refusé
+Validation_de_recette -> Menu_Employé: Retour au menu
+Menu_Employé  -> Connexion : Deconnexion 
+Connexion -> Accueil : retour de l'applicaiton sans connexion 
+Accueil -> Employé  : Sortit de l'application 
+
+@enduml

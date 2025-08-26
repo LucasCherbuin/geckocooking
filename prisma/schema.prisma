@@ -1,0 +1,60 @@
+datasource db {
+    provider = "postgresql"
+    url      = env("DATABASE_URL")
+  }
+  
+  generator client {
+    provider = "prisma-client-js"
+  }
+  
+  model Recipe {
+    id                Int      @id @default(autoincrement())
+    titre             String
+    description       String
+    tempsPreparation  String   @default("00:10") // stocke HH:MM
+    tempsCuisson      String   @default("00:10") // stocke HH:MM
+    difficulteId      Int
+    imageId           Int
+    ingredientId      Int
+    etapesId          Int
+  }
+
+  model Utilisateur {
+    id                Int      @id @default(autoincrement())
+    String            pseudo
+    String            email
+    String            motDePasse
+    int               roleId
+    int               recetteId
+    int               commentaireId
+  }
+
+  model Ingredient {
+    id                Int      @id @default(autoincrement())
+    String            nom
+    int               imageId
+    string            unité
+  }
+  
+  model Difficulte {
+    id                Int      @id @default(autoincrement())
+    String            label
+  }
+
+  model Image {
+    id                Int      @id @default(autoincrement())
+    String            lien
+  }
+
+  model Etapes {
+    id                Int      @id @default(autoincrement())
+    String            etape1
+    String            etape2
+    String            etape3
+    String            etape4
+  }
+
+  class Regime {
+    id                Int      @id @default(autoincrement())
+    String            Label
+  }
