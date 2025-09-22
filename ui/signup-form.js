@@ -9,7 +9,7 @@ export function SignupForm() {
                 <label htmlFor="pseudo">Nom d'utilisateur</label>
                 <input id="pseudo" name="pseudo" placeHolder="Nom d'utilisateur"></input>
             </div>
-            {state?.error?.name && <p>{state.errors.name}</p>}
+            {state?.error?.pseudo && <p>{state.errors.pseudo}</p>}
             <div>
                 <label htmlFor="email">Email</label>
                 <input id="email" name="email" placeHolder="Email"></input>
@@ -30,7 +30,7 @@ export function SignupForm() {
                 </div>
             )}
             <div>
-                <button disabled={pending} type="submit"> s'inscrire</button>
+                <button disabled={pending} type="submit">s'inscrire</button>
             </div>
         </form>
     )

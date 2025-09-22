@@ -1,4 +1,5 @@
-import dbconnect from "../lib/mongodb"
+import { createSession } from '../lib/session'
+import { cookies } from 'next/headers'
 
 export async function signup(state, formData) {
     

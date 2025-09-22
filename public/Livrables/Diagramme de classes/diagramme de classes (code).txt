@@ -1,6 +1,7 @@
 @startuml
 
 class Utilisateur {
+  int id
   String pseudo
   String email
   String motDePasse
@@ -10,6 +11,7 @@ class Utilisateur {
 }
 
 class Recette {
+  int id
   String titre
   String description
   Time tempsPreparation
@@ -21,19 +23,28 @@ class Recette {
 }
 
 class Ingredient {
+  int id
   String nom
   int imageId
+  string unité
 }
 
 class Difficulte {
+  int id
   String label
 }
 
 class Image {
+  int id
   String lien
 }
 
+class Role {
+  int id
+  String label
+}
 class Etapes {
+  int id
   String etape1
   String etape2
   String etape3
@@ -41,9 +52,12 @@ class Etapes {
 }
 
 class Regime {
+  int id
   String Label
 }
 ' Relations
+
+
 
 Utilisateur "1" -- "0..*" Recette : crée
 Recette "1" -- "1" Difficulte : a

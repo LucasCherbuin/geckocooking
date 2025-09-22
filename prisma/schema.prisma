@@ -21,40 +21,40 @@ datasource db {
 
   model Utilisateur {
     id                Int      @id @default(autoincrement())
-    String            pseudo
-    String            email
-    String            motDePasse
-    int               roleId
-    int               recetteId
-    int               commentaireId
+    pseudo            String
+    email             String
+    motDePasse        String
+    roleId            Int
+    recetteId         Int
+    commentaireId     Int
   }
 
   model Ingredient {
     id                Int      @id @default(autoincrement())
-    String            nom
-    int               imageId
-    string            unité
+    nom               String
+    imageId           Int
+    sunite            String
   }
   
   model Difficulte {
     id                Int      @id @default(autoincrement())
-    String            label
+    label             String
   }
 
   model Image {
     id                Int      @id @default(autoincrement())
-    String            lien
+    Lien              String
   }
 
   model Etapes {
     id                Int      @id @default(autoincrement())
-    String            etape1
-    String            etape2
-    String            etape3
-    String            etape4
+    etape1            String
+    etape2            String
+    etape3            String
+    etape4            String
   }
 
-  class Regime {
+  model Regime {
     id                Int      @id @default(autoincrement())
-    String            Label
+    Label             String
   }
