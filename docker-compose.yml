@@ -15,9 +15,9 @@ services:
       container_name: postgres_db
       restart: always
       environment:
-        POSTGRES_USER: gecko
-        POSTGRES_PASSWORD: gecko123
-        POSTGRES_DB: gecko
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: 1234
+        POSTGRES_DB: geckoCooking
       ports:
         - "5432:5432"
       volumes:
