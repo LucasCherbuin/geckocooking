@@ -41,6 +41,11 @@ datasource db {
     label             String
   }
 
+  model Role {
+    id                Int      @id @default(autoincrement())
+    label             String
+  }
+
   model Image {
     id                Int      @id @default(autoincrement())
     Lien              String

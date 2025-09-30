@@ -1,4 +1,4 @@
-import { signup } from '@/action/auth'
+import { signup, useSession, } from '@/action/auth'
 
 export function SignupForm() {
     return (
@@ -12,7 +12,10 @@ export function SignupForm() {
                 <input id="motDePasse" name="motDePasse" placeHolder="Mot de passe"></input>
             </div>
             <div>
-                <button href="auth.ts">s'inscrire</button>
+                <input Type="checkbox" name='remember'>Se souvenir de moi</input>
+            </div>
+            <div>
+                <button href="auth.js">s'inscrire</button>
                 <button type="submit">se connecter</button>
             </div>
         </form>

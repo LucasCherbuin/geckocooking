@@ -9,15 +9,22 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
     "@prisma/client": "^6.16.2",
+    "bcryptjs": "^3.0.2",
     "jose": "^6.1.0",
+    "knex": "^3.1.0",
     "mongoose": "^8.18.1",
     "next": "^15.5.3",
     "next-auth": "^4.24.11",
     "nookies": "^2.5.2",
+    "pg": "^8.16.3",
     "prisma": "^6.16.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-querybuilder": "^8.9.1",
+    "sass": "^1.93.2",
+    "sass-embedded": "^1.93.2",
     "swr": "^2.3.6"
   },
   "devDependencies": {
@@ -40,5 +47,8 @@
   "bugs": {
     "url": "https://github.com/LucasCherbuin/geckocooking/issues"
   },
-  "homepage": "https://github.com/LucasCherbuin/geckocooking#readme"
+  "homepage": "https://github.com/LucasCherbuin/geckocooking#readme",
+  "prisma": {
+    "seed": "node prisma/migration/seeds/1_users.js"
+  }
 }

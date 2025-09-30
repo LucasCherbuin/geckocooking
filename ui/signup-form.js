@@ -1,4 +1,5 @@
 import { signup } from '@/actions/auth'
+import * as  sass from  '../sass/'
 
 export function SignupForm() {
     const [state, action, pending] = useActionState(signup, undefined)
@@ -29,6 +30,9 @@ export function SignupForm() {
                     </ul>
                 </div>
             )}
+            <div>
+                <input Type="checkbox" name='remember'>Maintenir la connexion</input>
+            </div>
             <div>
                 <button disabled={pending} type="submit">s'inscrire</button>
             </div>

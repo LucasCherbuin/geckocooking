@@ -1,10 +1,15 @@
-@use './abstracts' as *;
+@use './sass/abstracts/fonts' as *;
+@use './sass/abstracts/media-query' as *;
 
-@use './base' as *;
+@use './base/base' as *;
 
-@use './components' as *;
+@use './components/buttons' as *;
+@use './components/carousel' as *;
 
-@use './layout' as *;
+@use './layout/footer' as *;
+@use './layout/form' as *;
+@use './layout/header' as *;
+@use './layout/navigation.scss' as *;
 
-@use './pages' as *;
-
+@use './pages/formConnexion.scss' as *;
+@use './pages/home.scss' as *;

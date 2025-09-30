@@ -1,19 +1,35 @@
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 
-
-//retourne le role de l'utilisateur
 export default function Home() {
-    const { data: session, status } = useSession();
-    if (status === "loading") return <p>Chargement...</p>;
-    if (!session) return <p>Connexion échoué</p>
+  const { data: session, status } = useSession();
 
-//récupère les ròles (vide par défault)
-const roles = session?.user?.roles || [];
-  let headerContent;
+  if (status === "loading") return <p>Chargement...</p>;
 
+  let headerContent = null; // ✅ déclaration en haut
 
-  // Vérification des rôles
+  if (!session) {
+    headerContent = (
+      <nav>
+        <ul>
+          <li><Link href="/signup">Créer un compte</Link></li>
+          <li><Link href="/auth">S&apos;identifier</Link></li>
+        </ul>
+      </nav>
+    );
+
+    return (
+      <div>
+        <header className="headerContent">
+          {headerContent}
+        </header>
+      </div>
+    );
+  }
+
+  const roles = session?.user?.roles || [];
+  console.log(roles);
+
   if (roles.includes("ADMIN")) {
     headerContent = (
       <nav>
@@ -49,29 +65,14 @@ const roles = session?.user?.roles || [];
         </ul>
       </nav>
     );
-  } else {
-    // Non connecté
-    headerContent = (
-      <nav>
-        <ul>
-          <li><Link href="/signup">Créer un compte</Link></li>
-          <li><Link href="/auth">S `&apos;`identifier</Link></li>
-        </ul>
-      </nav>
-    );
   }
 
   return (
     <div>
-      <header>
+      <header className="headerContent">
         {headerContent}
       </header>
-     <p>Bienvenue {session.user.pseudo}</p>
+      <p>Bienvenue {session?.utilisateur?.pseudo || "Utilisateur"}</p>
     </div>
   );
 }
-
-
-
-
-
