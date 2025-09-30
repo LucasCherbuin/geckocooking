@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  //react
   reactStrictMode: true,
-  // autres configs
+  //sass
+  sassOptions: {
+    implementation: 'sass-embedded'
+  },
 };
 
 export default nextConfig;
