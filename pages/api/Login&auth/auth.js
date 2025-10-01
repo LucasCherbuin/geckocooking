@@ -1,6 +1,7 @@
 import { formEvent } from 'react'
 import { useRouter } from 'next/router'
 import { headers } from 'next/headers'
+import { sendmail } from 'lib/send-mail.js'
 
 export default function LoginPage() {
     const router = useRouter()
@@ -25,11 +26,11 @@ export default function LoginPage() {
     }
 }
 
-    return(
-        <form onSubmit={handleSubmit}>
-            <input type="pseudo" name="pseudo" placeholder='pseudo' required />
-            <input type="password" name="password" placeholder='password' required/>
-            <button type="submit">login</button>
-        </form>
+    return (
+            <form onSubmit={handleSubmit}>
+                <input type="pseudo" name="pseudo" placeholder='pseudo' required />
+                <input type="password" name="password" placeholder='password' required/>
+                <button type="submit">login</button>
+            </form> 
     )
 }

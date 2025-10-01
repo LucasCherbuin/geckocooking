@@ -10,6 +10,8 @@ COPY package*.json ./
 RUN npm install
 RUN npm install jose
 RUN npm i sass
+RUN npm install --dev @fab/nextjs
+
 
 # Copier le reste du projet
 COPY . .
@@ -21,6 +23,6 @@ EXPOSE 3000
 RUN npx prisma generate
 
 # Démarrer le serveur de développement
-CMD ["npm", "run", "dev"]
+RUN npm run dev
 
 # docker build -t geckocooking . (construire image)
