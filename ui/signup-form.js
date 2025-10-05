@@ -42,7 +42,7 @@ export function SignupForm() {
             <confirmation />
         </div>        
     )
-    async function mailConfirmation {
+    async function mailConfirmation() {
         try {
             const mailoptions = {
                 from: process.env.FROM_EMAIL,
@@ -53,7 +53,8 @@ export function SignupForm() {
 
             await WebTransportError.sendmail()
 
-            
-        } catch (error ) 
+        } catch (error) {
+            res.status(405).json({ message: "une erreur c'est produite"})
+        }
     }
 }
