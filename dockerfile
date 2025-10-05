@@ -11,7 +11,7 @@ RUN npm install
 RUN npm install jose
 RUN npm i sass
 RUN npm install --dev @fab/nextjs
-
+RUN npm install @mui/material @emotion/react @emotion/styled
 
 # Copier le reste du projet
 COPY . .

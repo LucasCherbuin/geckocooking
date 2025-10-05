@@ -9,10 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/cache": "^11.14.0",
     "@emotion/react": "^11.14.0",
+    "@emotion/server": "^11.11.0",
     "@emotion/styled": "^11.14.1",
     "@fab/nextjs": "^0.0.1",
-    "@mui/material": "^7.3.2",
+    "@mui/icons-material": "^7.3.4",
+    "@mui/material": "^7.3.4",
+    "@mui/material-nextjs": "^7.3.3",
     "@phosphor-icons/react": "^2.1.10",
     "@prisma/client": "^6.16.2",
     "bcryptjs": "^3.0.2",
@@ -28,6 +32,7 @@
     "prisma": "^6.16.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-is": "^18.3.1",
     "react-querybuilder": "^8.9.1",
     "sass": "^1.93.2",
     "sass-embedded": "^1.93.2",

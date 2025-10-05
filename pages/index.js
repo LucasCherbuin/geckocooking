@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { useSession } from "next-auth/react";
 import Head from "next/head";
-import { FloatingAction } from "../ui/Floating-action-button";
+import { floatingAction } from "../ui/floating-action-button";
+
 
 export default function Home() {
   const { data: session, status } = useSession();
@@ -17,7 +18,7 @@ export default function Home() {
             <li><Link href="/auth">S&apos;identifier</Link></li>
           </ul>
         </nav>
-        <FloatingAction />
+        <floatingAction />
       </>
     );
 
