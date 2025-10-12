@@ -37,6 +37,8 @@ export function refused() {
 
             await WebTransportError.sendmail()
 
-        } catch (error)
+        } catch (err) {
+            res.status(500)({ error: err.message });
+        }
     }
 }
