@@ -3,26 +3,29 @@ FROM node:18-alpine
 # Dossier de travail dans le conteneur
 WORKDIR /app
 
-# Copier les fichiers de dépendances
+# Copier uniquement les fichiers de dépendances
 COPY package*.json ./
 
-# Installer les dépendances
-RUN npm install
-RUN npm install jose
-RUN npm i sass
-RUN npm install --dev @fab/nextjs
-RUN npm install @mui/material @emotion/react @emotion/styled
+# Installer toutes les dépendances
+RUN npm install \
+    && npm install jose \
+    && npm install sass \
+    && npm install --dev @fab/nextjs \
+    && npm install next-auth \
+    && npm install nookies \
+    && npm install @mui/material @emotion/react @emotion/styled
 
 # Copier le reste du projet
 COPY . .
 
-# Exposer le port 3000 (Next.js)
-EXPOSE 3000
-
-#configurer prisma
+# Générer Prisma
 RUN npx prisma generate
 
-# Démarrer le serveur de développement
-RUN npm run dev
+# Exposer le port 3000
+EXPOSE 3000
+
+# Démarrer le serveur 
+CMD ["npm", "run", "dev"]
+
 
 # docker build -t geckocooking . (construire image)

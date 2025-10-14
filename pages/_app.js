@@ -1,8 +1,8 @@
 import { SessionProvider } from "next-auth/react";
 import '../sass/main.scss';
-import Link from "next/link";
+import  Link  from "next/link";
 import { House, User } from "@phosphor-icons/react";
-import footer from "../pages/layout/footer";
+import { footer } from "../pages/layout/footer";
 
 
 
