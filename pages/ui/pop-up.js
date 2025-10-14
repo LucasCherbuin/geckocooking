@@ -1,5 +1,6 @@
 import { User } from '@phosphor-icons/react';
-import * as  sass from  '../sass/'
+
+
 
 export function confirmation() {
     return (

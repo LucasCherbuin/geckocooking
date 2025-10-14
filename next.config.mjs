@@ -1,7 +1,4 @@
 /** @type {import('next').NextConfig} */
-<<<<<<< HEAD
-const nextConfig = {};
-=======
 const nextConfig = {
   //react
   reactStrictMode: true,
@@ -10,6 +7,5 @@ const nextConfig = {
     implementation: 'sass-embedded'
   },
 };
->>>>>>> db55946 (configuration de scss dans le projet)
 
 export default nextConfig;
