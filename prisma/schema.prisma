@@ -7,7 +7,7 @@ datasource db {
     provider = "prisma-client-js"
   }
   
-  model Recipe {
+  model Recette {
     id                Int      @id @default(autoincrement())
     titre             String
     description       String
@@ -17,6 +17,7 @@ datasource db {
     imageId           Int
     ingredientId      Int
     etapesId          Int
+    regimeId          Int
   }
 
   model Utilisateur {

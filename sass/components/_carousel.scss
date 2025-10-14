@@ -1,0 +1,14 @@
+.carousel {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.carouselContent {
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.carouselItem {
+    list-style-type: none;
+    padding: 20px;
+}
