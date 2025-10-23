@@ -1,5 +1,5 @@
-import dbconnect from "../../lib/mongodb";
-import Consultation from "../../models/Consultation";
+import dbconnect from "../../../lib/mongodb";
+import Consultation from "../../../models/Consultation";
 
 export default async function handler(req, res) {
     await dbconnect();

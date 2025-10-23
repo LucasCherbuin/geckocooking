@@ -11,6 +11,30 @@ export function confirmation() {
     );
 }
 
+export function employeConfirmation() {
+    return (
+    <div class="pop-up">
+        <p> Compte créer, un email de confirmation a été envoyé au nouvel utilisateur</p>
+        <button type="button"><CheckCircle size={32} /></button>
+    </div>
+    )
+     async function mailReponseEmploye() {
+        try {
+            const mailoption = {
+                from: process.env.FROM_EMAIL,
+                to :utilisateur.email,
+                subject: "Bienvenue chez GeckoCooking",
+                html: "Bonjour ${pseudo}, votre compte professionnel a été configurer, veuillez contacter l'administrateur pour votre mot de passe "
+            }
+
+            await WebTransportError.sendmail()
+
+        } catch (err) {
+            res.status(500)({ error: err.message });
+        }
+    }
+}
+
 export function refused() {
     return (
         <div class="pop-up">
