@@ -1,5 +1,5 @@
 import { User } from '@phosphor-icons/react';
-import Search from './sreachingBar';
+import Search from '../../lib/sreachingBar';
 import { IngredientIcon } from './icone';
 
 
@@ -72,6 +72,8 @@ export function AddIngredient() {
                 ${Ingredient.unite}
             </unity>
         </div>
+            <br/>
+        
     </div>
     )
 }

@@ -1,7 +1,7 @@
 import {Card, CardHeader, CardFooter} from "@heroui/card";
 
 
-export default function card() {
+export default function Card() {
     return (
         <card>
             <CardHeader>

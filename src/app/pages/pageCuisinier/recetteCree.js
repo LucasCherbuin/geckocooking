@@ -1,5 +1,6 @@
 import { recetteVerification } from "../ui/pop-up";
 import { IngredientIcon, RegimeIcon, addIcon } from "../ui/icone";
+import { submit } from "../ui/buttons/Submit";
 import { newRecette } from "../ui/formulaires/RecetteForm";
 import { CarrotIcon, GradientIcon} from "@phosphor-icons/react";
 
@@ -39,6 +40,7 @@ export function recette() {
 
             <div class="ingredient">
                 <IngredientIcon />
+                <addIcon/>
             </div>
 
             <br />
@@ -71,7 +73,7 @@ export function recette() {
 
             <br />
 
-            <button action="submit">confirmé</button>
+            <Submit/>
 
         </recetteCreation>
     );

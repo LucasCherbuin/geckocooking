@@ -1,4 +1,4 @@
-import { PlusCircle } from "@phosphor-icons/react"
+import { PlusCircle, Envelope, Checks, Warning } from "@phosphor-icons/react"
 
 export function IngredientIcon() {
     return (
@@ -22,5 +22,22 @@ export function addIcon() {
             <button><PlusCircle size={32} /></button>
         </div>
     )
+}
 
+export  function enAttenteIcon() {
+    return (
+        <div id="valited"><Envelope size={32} /></div>
+    )
+}
+
+export  function PublierIcon() {
+    return (
+        <div id="consulted"><Checks size={32} /></div>
+    )
+}
+
+export  function RefuserIcon() {
+    return (
+        <div id="refused"><Warning size={32} /></div>
+    )
 }
