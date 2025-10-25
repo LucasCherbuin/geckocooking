@@ -1,6 +1,6 @@
 #1 objectif de l'application
 
-Proposez une application de création et consultations de recettes de cuisines avec indication du type de régime avec un système de recherche par nom ou ingrédient.
+- Proposez une application de création et consultations de recettes de cuisines avec indication du type de régime avec un système de recherche par nom ou ingrédient.
 
 #2 Acteurs et leurs actions
 
@@ -30,3 +30,7 @@ Proposez une application de création et consultations de recettes de cuisines a
   Techno: prisma
   Base de données utilisées: postgresql (Relationnel) mongodb (non-relationnel)
   Mailer: Mailjet
+
+#4 Source et aides
+- https://medium.com/
+- https://nextjs.org/
