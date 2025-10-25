@@ -1,4 +1,6 @@
 import { User } from '@phosphor-icons/react';
+import Search from './sreachingBar';
+import { IngredientIcon } from './icone';
 
 
 
@@ -42,4 +44,34 @@ export function refused() {
             res.status(500)({ error: err.message });
         }
     }
+}
+
+export function recetteVerification() {
+    return (
+    <div classe="pop-up">
+        <p> Votre recette est en cours de vérification</p>
+        <button type="button"><CheckCircle size={32} /></button>
+    </div>
+    );
+}
+
+export function AddIngredient() {
+    return (
+    <div class="addIgredient">
+        <Search/>
+            <br/>
+        <IngredientIcon/>
+            <br/>
+        <div class="untity">
+            <quantity>
+                <p>quantité</p>
+                ${Ingredient.quantite}
+            </quantity>
+            <unity>
+                <p>type d'unité</p>
+                ${Ingredient.unite}
+            </unity>
+        </div>
+    </div>
+    )
 }

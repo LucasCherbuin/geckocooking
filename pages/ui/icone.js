@@ -2,8 +2,16 @@ import { PlusCircle } from "@phosphor-icons/react"
 
 export function IngredientIcon() {
     return (
-        <div class="Icon" name="ingredient">
+        <div type="onclick" class="Icon" name="ingredient">
             <div>${ingredient.imageId}</div>
+        </div>
+    )
+}
+
+export function RegimeIcon() {
+    return (
+        <div class="Icon" name="ingredient">
+            <div>${regime.imageId}</div>
         </div>
     )
 }
@@ -14,4 +22,5 @@ export function addIcon() {
             <button><PlusCircle size={32} /></button>
         </div>
     )
+
 }

@@ -11,8 +11,8 @@ datasource db {
     id                Int      @id @default(autoincrement())
     titre             String
     description       String
-    tempsPreparation  String   @default("00:10") // stocke HH:MM
-    tempsCuisson      String   @default("00:10") // stocke HH:MM
+    tempsPreparation  Time   @default("00:10") // stocke HH:MM
+    tempsCuisson      Time   @default("00:10") // stocke HH:MM
     difficulteId      Int
     imageId           Int
     ingredientId      Int
@@ -35,6 +35,7 @@ datasource db {
     String            nom
     int               imageId
     string            unité
+    int               quantité
   }
   
   model Difficulte {
@@ -58,4 +59,5 @@ datasource db {
   class Regime {
     id                Int      @id @default(autoincrement())
     String            Label
+  
   }
