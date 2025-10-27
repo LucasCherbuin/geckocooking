@@ -34,4 +34,6 @@ export default function Refuser(){
     return (
         <button id="refused" onclick="true">${etat.label.refuse}<Warning size={32} /></button>
     )
+export default function Consulte() {
+    <button link="recette.{id}"><ClipboardText size={32} /></button>
 }
