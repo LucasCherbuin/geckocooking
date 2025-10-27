@@ -1,5 +1,5 @@
-import Consultation from "../../../models/Consultation";
-import recetteCree from "../../../models/recetteCree";
+import Consultation from "../../../../models/Consultation";
+import recetteCree from "../../../../models/recetteCree";
 
 export function dashboardRecipe() {
     return (

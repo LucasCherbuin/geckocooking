@@ -1,7 +1,7 @@
 import { SignupFormSchema } from "\u0016\u0016@/app/lib/definitions";
-import employeCreateForm from "\u0016\u0016@/app/ui/employeCreateForm";
-import { employeConfirmation } from "\u0016\u0016@/app/ui/pop-up";
-import { Search } from "\u0016\u0016@/app/ui/sreachingBar";
+import employeCreateForm from "@/app/pages/ui/employeCreateForm";
+import { employeConfirmation } from "@/app/pages/ui/pop-up";
+import { Search } from "@/app/pages/ui/sreachingBar";
 
 export function EmployeCreate() {
     return (

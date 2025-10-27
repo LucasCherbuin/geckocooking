@@ -3,7 +3,6 @@ import {Card, CardHeader, CardBody, CardFooter} from "@heroui/card";
 import { prisma } from "../api/recette"
 
 
-
 export default function carrousel() {
     return (
 <Carousel>

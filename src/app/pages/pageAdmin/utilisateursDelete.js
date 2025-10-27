@@ -1,5 +1,5 @@
-import { Search } from "\u0016\u0016@/app/ui/sreachingBar";
-import { deleteUser } from "\u0016\u0016@/app/ui/table";
+import { Search } from "@/app/pages/ui/sreachingBar";
+import { deleteUser } from "@/app/pages/ui/table";
 
 export default function utilisateurModif() {
     return (
