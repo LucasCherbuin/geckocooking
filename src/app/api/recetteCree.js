@@ -1,6 +1,7 @@
 import dbconnect from "../../../lib/mongodb";
 import RecetteCree from "../../../models/recetteCree";
 
+
 export default async function handler(req, res) {
     await dbconnect();
 
