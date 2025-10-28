@@ -1,5 +1,8 @@
+const isProd = process.env.NODE_ENV === 'production';
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+<<<<<<< HEAD
   //react
   reactStrictMode: true,
   //sass
@@ -17,6 +20,12 @@ const nextConfig = {
       "lightningcss": false,
     };
     return config;
+=======
+  reactStrictMode: true,
+  assetPrefix: isProd ? '/_assets' : '',
+  experimental: {
+    optimizePackageImports: ['@mui/material'],
+>>>>>>> Authentification/connexion
   },
 };
 
