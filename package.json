@@ -13,11 +13,7 @@
     "@heroui/system": "^2.4.23",
     "@heroui/theme": "^2.4.23",
     "@phosphor-icons/react": "^2.1.10",
-<<<<<<< HEAD
-    "@premieroctet/next-crud": "^4.0.1",
-=======
     "@prisma/client": "^6.17.1",
->>>>>>> adminPages
     "@radix-ui/react-slot": "^1.2.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
